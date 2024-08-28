@@ -18,9 +18,6 @@ mongoose
     console.log("Connected to MongoDB");
 
     // Start the server only after a successful database connection
-    app.listen(PORT, () => {
-      console.log(`Server is running on port ${PORT}`);
-    });
   })
   .catch((error) => {
     console.error("Failed to connect to MongoDB", error);
@@ -71,3 +68,13 @@ app.get("/post/:nr", async (req, res) => {
     res.status(500).json({ error: "Failed to fetch post" });
   }
 });
+
+app.get("/", (req, res) => {
+  res.send("Hello World!");
+});
+
+app.listen(PORT, () => {
+  console.log(`Server is running on port ${PORT}`);
+});
+
+module.exports = app;
