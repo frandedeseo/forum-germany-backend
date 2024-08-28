@@ -1,0 +1,46 @@
+{
+    "nr":203,
+    "created":"2023-05-10T07:56:09Z",
+    "history":[
+       {
+          "subject":"compute_image_mean_and_std test failed",
+          "created":"2023-05-10T07:56:09Z",
+          "content":"<p><img src=\"/redirect/s3?bucket=uploads&amp;prefix=paste%2Flgm6098973f6c7%2Ff4da5f0d08f93e7d386b14da8968492010f758b81f24b338dfd2e3a9d2ed0ac8%2FScreenshot_2023-05-10_at_09.50.14.png\" alt=\"Screenshot_2023-05-10_at_09.50.14.pngNaN\" /><img src=\"/redirect/s3?bucket=uploads&amp;prefix=paste%2Flgm6098973f6c7%2F9748b51dbfd9f8e1beb0f18fa75980df693c4a91eefa5f43e0c3823c33c54408%2FScreenshot_2023-05-10_at_09.50.00.png\" alt=\"Screenshot_2023-05-10_at_09.50.00.pngNaN\" /></p>\n<p></p>\n<p>Hello,</p>\n<p></p>\n<p>I get this error when I test my function, although I am already using the numpy built-in functions.</p>\n<p>I would be grateful for any explanation as to why the functions don&#39;t compute the correct mean and std.</p>\n<p></p>\n<p></p>\n<p>Thanks in advance </p>"
+       }
+    ],
+    "children":[
+       {
+          "subject":"",
+          "created":"2023-05-10T08:00:01Z",
+          "history":[
+             {
+                "subject":"",
+                "created":"2023-05-10T08:00:01Z",
+                "content":"Hi, we answered this problem in @161"
+             }
+          ],
+          "children":[
+             
+          ]
+       },
+       {
+          "subject":"",
+          "created":"2023-05-10T08:00:05Z",
+          "history":[
+             {
+                "subject":"",
+                "created":"2023-05-10T08:25:54Z",
+                "content":"<p>Maybe your images variable is corrupted? The code seems fine…</p>\n<p></p>\n<p>[EDIT]</p>\n<p></p>\n<p>For everybody who ran into this issue, here is how I think I have solved it:</p>\n<p>As Instructors have pointed out, the problem occurs when directly modifying the elements of images array. Instead one should use numpy operations because they do not modify the original variable but create a copy. Another advantage is that you dont need for loops anymore for this. I rewrote the RescaleTransform function like this:</p>\n<p></p>\n<p><img src=\"/redirect/s3?bucket=uploads&amp;prefix=paste%2Flgkno0mwkth6a%2F05281ab9676df8262c9dfdf24cc8f3472a1dcc00bff8d1432d217c856b640aca%2Fimage.png\" alt=\"image.pngNaN\" /></p>\n<p></p>\n<p>For me this fixed the issue, i hope this is what the instructors meant.</p>\n<p></p>"
+             },
+             {
+                "subject":"",
+                "created":"2023-05-10T08:00:05Z",
+                "content":"<md>Maybe your images variable is corrupted? The code seems fine...</md>"
+             }
+          ],
+          "children":[
+             
+          ]
+       }
+    ]
+ }
